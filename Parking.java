@@ -106,9 +106,7 @@ public class Parking {
 			remArr.add(index);
 		} else if (input.startsWith(status)) {
 			response = String.format("%1s %10s %12s", "Slot no.", "Registration No", "colour") + "\n";
-			System.out.println(response);
 			int x = 0;
-			System.out.println("sdf: "+arr.size());
 			String data = "";
 			for (int i = 0; i < arr.size(); i++) {
 				x++;
