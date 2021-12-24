@@ -125,6 +125,30 @@ public class Parking {
 				String asString = arrList.toString();
 				response = asString.substring(1, asString.length() - 1);
 				System.out.println(response);
+			} else if (input.startsWith(slot_number_for_registration_number)) {
+				String[] arrNum = input.split(" ");
+				String text = arrNum[1];
+				List<Integer> arrList = new ArrayList<Integer>();
+
+				boolean isExist = false;
+				for (String str : arr) {
+					String[] find = str.split(" ");
+					if (text.equals(find[0])) {
+						int x = arr.indexOf(str) + 1;
+						arrList.add(x);
+						isExist = true;
+						break;
+					}
+				}
+
+				if (isExist) {
+					String asString = arrList.toString();
+					response = asString.substring(1, asString.length() - 1);
+					System.out.println(response);
+				} else {
+					response = "Not found";
+					System.out.println(response);
+				}
 			}
             
             
